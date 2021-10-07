@@ -6,7 +6,7 @@ typedef struct
     long number;
     char *name;
     char *phone;
-    double salaray;
+    double salary;
 }   Employee, *PtrToEmployee;
 
 typedef const Employee *PtrToConstEmployee;
