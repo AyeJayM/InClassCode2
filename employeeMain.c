@@ -8,7 +8,7 @@ int main(void)
 {
     //defined in employeOne.c or employeeTwo.c
     PtrToEmployee searchEmployeeByNumber(const Employee table[], int sizeTable, long numberToFind);
-    PtrToEmployee searchEmployeebyName(const Employee table[], int sizeTable, char * nameToFind);
+    PtrToEmployee searchEmployeeByName(const Employee table[], int sizeTable, char * nameToFind);
 
     PtrToEmployee searchEmployeeByPhone(const Employee table[], int sizeTable, char * phoneToFind);
     PtrToEmployee searchEmployeeBySalary(const Employee table[], int sizeTable, double phoneToFind);
@@ -33,7 +33,7 @@ int main(void)
     }
 
     //EXAMPLE OF FOUND FROM LECTURE 12
-    matchPtr = searchEmployeebyName(EmployeeTable, EmployeeTableEntries, "Tony Bobcat");
+    matchPtr = searchEmployeeByName(EmployeeTable, EmployeeTableEntries, "Tony Bobcat");
     if (matchPtr != NULL)
     {
         printf("\nEmployee Tony Bobcat is in record %d\n", matchPtr - EmployeeTable);
@@ -44,8 +44,6 @@ int main(void)
 
     }
 
-
-    PtrToEmployee matchPtr; //Declaration
     matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "310-555-1215");
 
 
