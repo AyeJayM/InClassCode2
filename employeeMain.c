@@ -60,7 +60,6 @@ int main(void)
     }
 
 
-
     //Example of Phone Not Found
 
     matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "310-545-3359");
@@ -88,7 +87,6 @@ int main(void)
     {
         printf("\nEmployee with salary $4.50 is NOT found in the record\n");
     }
-
 
 
     //Example of Salary Not Found
