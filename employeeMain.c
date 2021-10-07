@@ -18,14 +18,35 @@ int main(void)
     extern Employee EmployeeTable[];
     extern const int EmployeeTableEntries;
 
-    /* Please note the demonstration samples from Lecture 12 ("Number" and "Name" search)
-    have been removed for the sake of making the actual assignment code more distinguishable */
+    PtrToEmployee matchPtr; //Declaration
 
+    //EXAMPLE OF NOT FOUND FROM LECTURE 12
+    matchPtr = searchEmployeeByNumber(EmployeeTable, EmployeeTableEntries, 1045);
+    
+    if (matchPtr != NULL)
+    {
+        printf("\nEmployee ID 1045 is in record %d\n", matchPtr - EmployeeTable);
+    }
+    else
+    {
+        printf("\nEmployee ID 1045 is NOT found in the record.\n");
+    }
+
+    //EXAMPLE OF FOUND FROM LECTURE 12
+    matchPtr = searchEmployeebyName(EmployeeTable, EmployeeTableEntries, "Tony Bobcat");
+    if (matchPtr != NULL)
+    {
+        printf("\nEmployee Tony Bobcat is in record %d\n", matchPtr - EmployeeTable);
+    }
+    else
+    {
+        printf("\nEmployee Tony Bobcat is NOT found in the record\n");
+
+    }
 
 
     PtrToEmployee matchPtr; //Declaration
     matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "310-555-1215");
-
 
 
     //Example of Phone Found
